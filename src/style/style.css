@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: aliceblue;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .outer {
+    background-color: #000;
+  }
+  
+  .square {
+    height: 100px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 70px;
+    margin: 15px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .square:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #4f4;
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  .heading {
+    letter-spacing: 3px;
+  }
+  
+  .restart-button {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff3d00, #ff931e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .restart-button:hover {
+    background: linear-gradient(to right, #ff931e, #ff3d00);
+  }
+  
+  .restart-button:active {
+    background: linear-gradient(to right, #ff3d00, #ff931e);
+  }
+  
+  .restart-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px #ff931e;
+  }
+  
+  .start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .start-button:hover {
+    background: linear-gradient(to right, #0083b0, #00b4db);
+  }
+  
+  .start-button:active {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+  }
+  
+  .start-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px #0083b0;
+  }
+  
+  .last-winners {
+    margin-top: 20px;
+  }
+  
+  .last-winners h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .last-winners ul {
+    list-style-type: none;
+  }
+  
+  .last-winners ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .timer {
+    margin-top: 20px;
+  }
+  
+  .timer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .timer p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .button-group {
+    margin-top: 20px;
+  }
+  
+  .button-group button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-right: 10px;
+  }
+  
+  .button-group button:last-child {
+    margin-right: 0;
+  }
+  
+  .button-group button:hover {
+    background: linear-gradient(to right, #0083b0, #00b4db);
+  }
+  
+  .button-group button:active {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+  }
+  
+  .button-group button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px #0083b0;
+  }
+  .reset-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff3d00, #ff931e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .reset-button:hover {
+    background: linear-gradient(to right, #ff931e, #ff3d00);
+  }
+  
+  .reset-button:active {
+    background: linear-gradient(to right, #ff3d00, #ff931e);
+  }
+  
+  .reset-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px #ff931e;
+  }
+  
+  @keyframes winnerAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideOutUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .square {
+      height: 80px;
+      width: 80px;
+      font-size: 50px;
+      margin: 10px;
+    }
+    
+    .heading {
+        margin-top: 130px;
+      font-size: 16px;
+    }
+    
+    .last-winners h2 {
+      font-size: 16px;
+    }
+    
+    .last-winners ul li {
+      font-size: 14px;
+    }
+    
+    .timer h2,
+    .timer p {
+      font-size: 14px;
+    }
+    
+    .button-group button {
+      font-size: 14px;
+    }
+    .restart-button{
+        top: 5%;
+        left: 28%;
+    }
+  }
+  
